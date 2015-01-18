@@ -1,0 +1,115 @@
+In file included from ../ext/bson.cc:36:
+In file included from ../ext/bson.h:17:
+../node_modules/nan/nan.h:189:74: error: too many arguments to function call, expected at most 3, have 4
+    return v8::Signature::New(v8::Isolate::GetCurrent(), receiver, argc, argv);
+           ~~~~~~~~~~~~~~~~~~                                            ^~~~
+/Users/ck/.node-gyp/0.11.12/deps/v8/include/v8.h:3585:3: note: 'New' declared here
+  static Local<Signature> New(Handle<FunctionTemplate> receiver =
+  ^
+In file included from ../ext/bson.cc:36:
+In file included from ../ext/bson.h:17:
+../node_modules/nan/nan.h:217:27: error: cannot initialize a parameter of type 'int' with an rvalue of type 'v8::Isolate *'
+    return v8::Array::New(v8::Isolate::GetCurrent());
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/ck/.node-gyp/0.11.12/deps/v8/include/v8.h:2335:31: note: passing argument to parameter 'length' here
+  static Local<Array> New(int length = 0);
+                              ^
+In file included from ../ext/bson.cc:36:
+In file included from ../ext/bson.h:17:
+../node_modules/nan/nan.h:222:54: error: too many arguments to function call, expected at most single argument 'length', have 2 arguments
+    return v8::Array::New(v8::Isolate::GetCurrent(), length);
+           ~~~~~~~~~~~~~~                            ^~~~~~
+/Users/ck/.node-gyp/0.11.12/deps/v8/include/v8.h:2335:3: note: 'New' declared here
+  static Local<Array> New(int length = 0);
+  ^
+In file included from ../ext/bson.cc:36:
+In file included from ../ext/bson.h:17:
+../node_modules/nan/nan.h:227:53: error: too many arguments to function call, expected single argument 'time', have 2 arguments
+    return v8::Date::New(v8::Isolate::GetCurrent(), time).As<v8::Date>();
+           ~~~~~~~~~~~~~                            ^~~~
+/Users/ck/.node-gyp/0.11.12/deps/v8/include/v8.h:2866:3: note: 'New' declared here
+  static Local<Value> New(double time);
+  ^
+In file included from ../ext/bson.cc:36:
+In file included from ../ext/bson.h:17:
+../node_modules/nan/nan.h:227:70: error: expected '(' for function-style cast or type construction
+    return v8::Date::New(v8::Isolate::GetCurrent(), time).As<v8::Date>();
+                                                             ~~~~~~~~^
+../node_modules/nan/nan.h:227:72: error: expected expression
+    return v8::Date::New(v8::Isolate::GetCurrent(), time).As<v8::Date>();
+                                                                       ^
+../node_modules/nan/nan.h:232:53: error: too many arguments to function call, expected single argument 'time', have 2 arguments
+    return v8::Date::New(v8::Isolate::GetCurrent(), time).As<v8::Date>();
+           ~~~~~~~~~~~~~                            ^~~~
+/Users/ck/.node-gyp/0.11.12/deps/v8/include/v8.h:2866:3: note: 'New' declared here
+  static Local<Value> New(double time);
+  ^
+In file included from ../ext/bson.cc:36:
+In file included from ../ext/bson.h:17:
+../node_modules/nan/nan.h:232:70: error: expected '(' for function-style cast or type construction
+    return v8::Date::New(v8::Isolate::GetCurrent(), time).As<v8::Date>();
+                                                             ~~~~~~~~^
+../node_modules/nan/nan.h:232:72: error: expected expression
+    return v8::Date::New(v8::Isolate::GetCurrent(), time).As<v8::Date>();
+                                                                       ^
+../node_modules/nan/nan.h:235:15: error: no type named 'UnboundScript' in namespace 'v8'
+  typedef v8::UnboundScript NanUnboundScript;
+          ~~~~^
+../node_modules/nan/nan.h:243:9: error: no member named 'ScriptCompiler' in namespace 'v8'
+    v8::ScriptCompiler::Source source(s, origin);
+    ~~~~^
+../node_modules/nan/nan.h:244:16: error: no member named 'ScriptCompiler' in namespace 'v8'
+    return v8::ScriptCompiler::CompileUnbound(
+           ~~~~^
+../node_modules/nan/nan.h:245:37: error: use of undeclared identifier 'source'; did you mean 'v8::Extension::source'?
+        v8::Isolate::GetCurrent(), &source);
+                                    ^~~~~~
+                                    v8::Extension::source
+/Users/ck/.node-gyp/0.11.12/deps/v8/include/v8.h:3712:46: note: 'v8::Extension::source' declared here
+  const String::ExternalAsciiStringResource* source() const {
+                                             ^
+In file included from ../ext/bson.cc:36:
+In file included from ../ext/bson.h:17:
+../node_modules/nan/nan.h:245:36: error: must explicitly qualify name of member function when taking its address
+        v8::Isolate::GetCurrent(), &source);
+                                   ^~~~~~~
+                                    Extension::
+../node_modules/nan/nan.h:252:9: error: no member named 'ScriptCompiler' in namespace 'v8'
+    v8::ScriptCompiler::Source source(s);
+    ~~~~^
+../node_modules/nan/nan.h:253:16: error: no member named 'ScriptCompiler' in namespace 'v8'
+    return v8::ScriptCompiler::CompileUnbound(
+           ~~~~^
+../node_modules/nan/nan.h:254:37: error: use of undeclared identifier 'source'; did you mean 'v8::Extension::source'?
+        v8::Isolate::GetCurrent(), &source);
+                                    ^~~~~~
+                                    v8::Extension::source
+/Users/ck/.node-gyp/0.11.12/deps/v8/include/v8.h:3712:46: note: 'v8::Extension::source' declared here
+  const String::ExternalAsciiStringResource* source() const {
+                                             ^
+In file included from ../ext/bson.cc:36:
+In file included from ../ext/bson.h:17:
+../node_modules/nan/nan.h:254:36: error: must explicitly qualify name of member function when taking its address
+        v8::Isolate::GetCurrent(), &source);
+                                   ^~~~~~~
+                                    Extension::
+../node_modules/nan/nan.h:279:36: error: too many arguments to function call, expected single argument 'value', have 2 arguments
+        v8::Isolate::GetCurrent(), val).As<v8::NumberObject>();
+                                   ^~~
+/Users/ck/.node-gyp/0.11.12/deps/v8/include/v8.h:2904:3: note: 'New' declared here
+  static Local<Value> New(double value);
+  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Release/obj.target/bson/ext/bson.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/usr/local/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:267:23)
+gyp ERR! stack     at ChildProcess.EventEmitter.emit (events.js:107:17)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (child_process.js:1045:12)
+gyp ERR! System Darwin 13.3.0
+gyp ERR! command "node" "/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+gyp ERR! cwd /Users/ck/coding/projects/js-bson
+gyp ERR! node -v v0.11.12
+gyp ERR! node-gyp -v v0.12.2
+gyp ERR! not ok 
