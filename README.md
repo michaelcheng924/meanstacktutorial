@@ -26,10 +26,20 @@ Here is the 5-part YouTube tutorial for this MEAN stack app:
 
 <h3>Cloning</h3>
 
-If you have trouble with the tutorial (especially since I had to modify the code due to an AngularJS update), simply clone this repo using "git clone git@github.com:michaelcheng429/meanstacktutorial.git", then make sure MongoDB is running, and then run the code with "node server".
+If you have trouble with the tutorial (especially since I had to modify the code due to an AngularJS update), simply clone this repo using 
 
-You might see a message that says, "Error: Module did not self-register.]
-js-bson: Failed to load c++ bson extension, using pure JS version". Don't worry about this; the code will still work.
+    git clone git@github.com:michaelcheng429/meanstacktutorial.git
+
+then make sure MongoDB is running, and then run the code with 
+
+    node server
+
+You might see a message that says, 
+
+    Error: Module did not self-register.]
+    js-bson: Failed to load c++ bson extension, using pure JS version
+    
+Don't worry about this; the code will still work.
 
 <h3>Have fun!</h3>
 
