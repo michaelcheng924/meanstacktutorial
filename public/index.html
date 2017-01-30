@@ -7,9 +7,31 @@
     <title>Contact List App</title>
 </head>
 <body ng-controller="AppController">
-    <div class="container">
-        <h1>Contact List App</h1>
 
+    <!-- Navigation toolbar -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><p>Contact List App</p></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-right">
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New contact</button>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
         <table class="table">
             <thead>
                 <tr>
@@ -20,13 +42,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><input class="form-control" ng-model="contact.name"></td>
-                    <td><input class="form-control" ng-model="contact.email"></td>
-                    <td><input class="form-control" ng-model="contact.number"></td>
-                    <td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
-                    <!--<td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="clear()">Clear</button></td>-->
-                </tr>
                 <!-- Print all the contacts from the database -->
                 <tr ng-repeat="contact in contactlist">
                     <td>{{contact.name}}</td>
@@ -64,7 +79,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button class="btn btn-primary" ng-click="addContact()">Add Contact</button>
+                    <button class="btn btn-primary" ng-click="addContact()" data-dismiss="modal">Add Contact</button>
                 </div>
             </div>
         </div>
