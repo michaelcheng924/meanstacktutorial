@@ -1,4 +1,4 @@
-# MEAN Stack RESTful API Tutorial - Contact List App
+# MEAN Stack RESTful API - Contact List App
 <h2>MEAN Stack RESTful API - Contact List App</h2>
 
 This repo contains the code for a RESTful API Contact List App that was built using the MEAN stack:
@@ -14,7 +14,7 @@ This repo contains the code for a RESTful API Contact List App that was built us
 
 First simply clone the repository, with this command on a git bash or a terminal.
 
-    git clone https://github.com/yamilelias/meanstacktutorial.git
+    git clone https://github.com/yamilelias/meanstack-contact-app.git
 
 Then install the Node modules (you need to have previously installed [Nodejs](https://nodejs.org/en/) with this:
 
