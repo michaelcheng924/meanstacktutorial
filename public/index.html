@@ -36,8 +36,11 @@
             <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
                     <th>Email</th>
-                    <th>Number</th>
+                    <th>Phone Number</th>
+                    <th>Type of Phone</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -45,8 +48,11 @@
                 <!-- Print all the contacts from the database -->
                 <tr ng-repeat="contact in contactlist">
                     <td>{{contact.name}}</td>
+                    <td>{{contact.lastname}}</td>
+                    <td>{{contact.address}}</td>
                     <td>{{contact.email}}</td>
                     <td>{{contact.number}}</td>
+                    <td>{{contact.typephone}}</td>
                     <td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button>&nbsp;<button class="btn btn-warning" ng-click="edit(contact._id)" data-toggle="modal" data-target="#editUserModal">Edit</button></td>
                 </tr>
             </tbody>
@@ -65,7 +71,15 @@
                     <form>
                         <div class="form-group">
                             <label for="contact-name">Contact Name</label>
-                            <input class="form-control" ng-model="contact.name" id="contact-name">
+                            <input class="form-control" ng-model="contact.name" id="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-lastname">Contact Last Name</label>
+                            <input class="form-control" ng-model="contact.lastname" id="contact-lastname">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-address">Contact Address</label>
+                            <input class="form-control" ng-model="contact.address" id="contact-address">
                         </div>
                         <div class="form-group">
                             <label for="contact-email">Contact Email</label>
@@ -73,7 +87,11 @@
                         </div>
                         <div class="form-group">
                             <label for="contact-number">Contact Phone Number</label>
-                            <input class="form-control" ng-model="contact.number" id="contact-number">
+                            <input class="form-control" ng-model="contact.number" id="contact-number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-typephone">Type of Phone</label>
+                            <input class="form-control" ng-model="contact.typephone" id="contact-typephone">
                         </div>
                     </form>
                 </div>
