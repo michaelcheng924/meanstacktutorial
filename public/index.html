@@ -68,36 +68,37 @@
                     <h4 class="modal-title" id="myModalLabel">Editing {{contact.name}} profile</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form name="myForm" novalidate>
                         <div class="form-group">
                             <label for="contact-name">Contact Name</label>
-                            <input class="form-control" ng-model="contact.name" id="contact-name" required>
+                            <input class="form-control" ng-model="contact.name" id="contact-name" placeholder="first name" required data-validation-required-message="Please fill with your name.">
                         </div>
                         <div class="form-group">
                             <label for="contact-lastname">Contact Last Name</label>
-                            <input class="form-control" ng-model="contact.lastname" id="contact-lastname">
+                            <input class="form-control" ng-model="contact.lastname" name="name" id="contact-lastname" placeholder="last name">
+                            <span ng-show="myForm.contact.name.$touched && myForm.contact.name.$invalid">The name is required.</span>
                         </div>
                         <div class="form-group">
                             <label for="contact-address">Contact Address</label>
-                            <input class="form-control" ng-model="contact.address" id="contact-address">
+                            <input class="form-control" ng-model="contact.address" id="contact-address" placeholder="address">
                         </div>
                         <div class="form-group">
                             <label for="contact-email">Contact Email</label>
-                            <input class="form-control" ng-model="contact.email" id="contact-email">
+                            <input class="form-control" ng-model="contact.email" id="contact-email" placeholder="email" type="email">
                         </div>
                         <div class="form-group">
                             <label for="contact-number">Contact Phone Number</label>
-                            <input class="form-control" ng-model="contact.number" id="contact-number" required>
+                            <input class="form-control" ng-model="contact.number" id="contact-number" placeholder="Phone" minlength="10" required>
                         </div>
                         <div class="form-group">
                             <label for="contact-typephone">Type of Phone</label>
-                            <input class="form-control" ng-model="contact.typephone" id="contact-typephone">
+                            <input class="form-control" ng-model="contact.typephone" id="contact-typephone" placeholder="work/home/other">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button class="btn btn-primary" ng-click="addContact()" data-dismiss="modal">Add Contact</button>
+                    <button class="btn btn-primary" ng-click="addContact()" data-dismiss="modal" ng-disabled="myForm.$invalid">Add Contact</button>
                 </div>
             </div>
         </div>
@@ -112,24 +113,37 @@
                     <h4 class="modal-title" id="modalLabel">Editing {{contact.name}} profile</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form name="myForm" novalidate>
                         <div class="form-group">
-                            <label>Contact Name</label>
-                            <input class="form-control" ng-model="contact.name">
+                            <label for="contact-name">Contact Name</label>
+                            <input class="form-control" ng-model="contact.name" id="contact-name" placeholder="first name" required data-validation-required-message="Please fill with your name.">
                         </div>
                         <div class="form-group">
-                            <label>Contact Email</label>
-                            <input class="form-control" ng-model="contact.email">
+                            <label for="contact-lastname">Contact Last Name</label>
+                            <input class="form-control" ng-model="contact.lastname" name="name" id="contact-lastname" placeholder="last name">
+                            <span ng-show="myForm.contact.name.$touched && myForm.contact.name.$invalid">The name is required.</span>
                         </div>
                         <div class="form-group">
-                            <label>Contact Phone Number</label>
-                            <input class="form-control" ng-model="contact.number">
+                            <label for="contact-address">Contact Address</label>
+                            <input class="form-control" ng-model="contact.address" id="contact-address" placeholder="address">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Contact Email</label>
+                            <input class="form-control" ng-model="contact.email" id="contact-email" placeholder="email" type="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-number">Contact Phone Number</label>
+                            <input class="form-control" ng-model="contact.number" id="contact-number" placeholder="Phone" minlength="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-typephone">Type of Phone</label>
+                            <input class="form-control" ng-model="contact.typephone" id="contact-typephone" placeholder="work/home/other">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button class="btn btn-primary" ng-click="update()" data-dismiss="modal">Edit Contact</button>
+                    <button class="btn btn-primary" ng-click="update()" data-dismiss="modal" ng-disabled="myForm.$invalid">Edit Contact</button>
                 </div>
             </div>
         </div>

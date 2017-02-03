@@ -10,7 +10,7 @@ myApp.controller('AppController', ['$scope', '$http', function($scope, $http) {
     // console.log("Hello World from controller");
 
     /**
-     * Retrieve the contacts again
+     * Retrieve the contacts againx
      */
     var refresh = function() {
         $http.get('/contactlist').success(function(response) {
