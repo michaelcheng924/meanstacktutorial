@@ -1,6 +1,8 @@
 # MEAN Stack RESTful API Tutorial - Contact List App
 <h2>MEAN Stack RESTful API Tutorial - Contact List App</h2>
 
+<img src="http://i288.photobucket.com/albums/ll175/michaelcheng429/meanstacktutorial_zpsu72ixs47.png" alt="mean stack tutorial app">
+
 This repo contains the code for a RESTful API Contact List App that was built using the MEAN stack:
 
 <ul>
@@ -24,13 +26,21 @@ Here is the 5-part YouTube tutorial for this MEAN stack app:
 
 <h4><a href="https://www.youtube.com/watch?v=06_SIzYXgqQ">Part 5/5: RESTful API Tutorial, DELETE and PUT Data</a></h4>
 
-<h3>Cloning</h3>
+<h3>Instructions</h3>
 
 If you have trouble with the tutorial (especially since I had to modify the code due to an AngularJS update), simply clone this repo using 
 
     git clone git@github.com:michaelcheng429/meanstacktutorial.git
 
-then make sure MongoDB is running, and then run the code with 
+then install the Node modules with
+
+    npm install
+
+then make sure MongoDB is running with
+
+    mongod
+
+from your MongoDB directory, and then run the code with 
 
     node server
 
